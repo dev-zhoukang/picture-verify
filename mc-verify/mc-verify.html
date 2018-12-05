@@ -34,16 +34,24 @@
 
             //拼图验证码的图片尺寸
             imgSize: {
-                width: '400px',
-                height: '200px',
+                width: '280px',
+                height: '180px',
+            },
+            barSize: {
+                width: '100%',
+                height: '40px', 
             },
 
             //......更多参数设置请查阅文档
 
             //验证成功以后的回调
             success: function () {
-                alert('验证匹配！');
+                // alert('验证匹配！');
+                window.location.href = 'verifySucceed://';
             }, 
+            error: function () {
+                window.location.href = 'verifyError://';
+            }
         });
     </script>
 </body>
